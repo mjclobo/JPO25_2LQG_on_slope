@@ -1,0 +1,5 @@
+ffmpeg -framerate 30 \
+    -i BY26_anim_figs/snapshots_%04d.png \
+    -vf "crop=trunc(iw/2)*2:trunc(ih/2)*2" \
+    -c:v libx264 -pix_fmt yuv420p \
+    2LQG.mp4
